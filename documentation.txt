@@ -1,0 +1,63 @@
+can run k8sgpt
+cant install Calud Desktop
+cant run commands due to billing permission with api
+
+
+installed brew,k8sgpt on ubuntu
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    3  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+    4  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    5  brew --version
+    6  sudo apt install gcc
+    7  brew install k8sgpt
+
+
+intsalled k8sgpt on aks using helm
+
+helm repo add k8sgpt https://charts.k8sgpt.ai/
+   25  helm repo update
+   26  helm install release k8sgpt/k8sgpt-operator -n k8sgpt-operator-system --create-namespace
+   27  az aks get-credentials --resource-group mon --name aks3571 --overwrite-existing
+   28  helm install release k8sgpt/k8sgpt-operator -n k8sgpt-operator-system --create-namespace
+   29  kubectl create secret generic k8sgpt-sample-secret --from-literal=openai-api-key=$OPENAI_TOKEN -n k8sgpt-operator-system
+
+
+installed deployent with error
+checked k8sgpt commands   thowing error due to permissions
+checked all types of commands
+
+kubectl get clusters
+   42  k8sgpt auth add
+   43  k8sgpt filters
+   44  k8sgpt analyze --explain
+   45  k8sgpt analyze --explain --filter=Service
+   46  k8sgpt analyze --explain --filter=Pod --namespace=default
+   47  k8sgpt filters list
+   48  k8sgpt cache list
+   49  k8sgpt analyze --custom-analysis
+   50  k8sgpt custom-analyzer list
+  k8sgpt analyze --explain --with-doc
+   58  k8sgpt analyze --custom-analysis
+   59  k8sgpt custom-analyzer list
+   60  k8sgpt custom-analyzer add --name my-custom-analyzer --port 8085
+   61  k8sgpt filters list
+   62  k8sgpt analyze --custom-analysis
+   63  k8sgpt custom-analyzer list
+   64  k8sgpt analyze --explain --filter=Pod --namespace=default
+   65  k8sgpt analyze --explain --filter=service --namespace=default
+   66  k8sgpt auth list
+   67  k8sgpt integrations list
+   68  k8sgpt integrations activate [integration(s)]
+   69  k8sgpt serve
+   70  k8sgpt analyze --explain --custom-headers CustomHeaderKey:CustomHeaderValue
+   71  k8sgpt analyze -s
+   72  k8sgpt dump
+   73  cat dump_20250503160409.json 
+   74  k8sgpt analyze --explain
+   75  k8sgpt auth default -p azureopenai
+   76  history
+   77  k8sgpt cache add azure --storageacc sa3571 --container c1345
+   78  k8sgpt cache list
+   79  k8sgpt analyze --custom-analysis
+   80  k8sgpt custom-analyzer list
