@@ -1,0 +1,39 @@
+ 1  cd
+    2  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    3  echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.profile
+    4  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    5  brew --version
+    6  brew install k8sgpt
+    7  k8sgpt version
+    8  k8sgpt auth list
+    9  k8sgpt auth -b azureopenai
+   10  k8sgpt auth add -b azureopenai
+   11  k8sgpt auth add azureopenai
+   12  k8sgpt auth list
+   13  k8sgpt auth use azureopenai
+   14  k8sgpt auth list
+   15  k8sgpt auth use -b azureopenai
+   16  k8sgpt auth add -b azureopenai -e "k8sai2" -m "gpt-4.1" -u "https://k8sai2.openai.azure.com/" -p "DHWrlTLkdMTqcF5f6SGjsMuV2BqqpKjAZZ5f4yRi7HVkry5N4GMsJQQJ99BEACYeBjFXJ3w3AAABACOGuKr7"
+   17  k8sgpt auth list
+   18  k8sgpt auth default -p azureopenai
+   19  k8sgpt auth list
+   20  k8sgpt analyze --explain
+   21  az aks get-credentials --resource-group k8sgpt --name aks3571 --overwrite-existing
+   22  az login
+   23  az account set --subscription de54f30d-f375-4d3a-810e-841758031ab5
+   24  az aks get-credentials --resource-group k8sgpt --name aks3571 --overwrite-existing
+   25  k8sgpt analyze --explain
+   26  k8sgpt auth add -b azureopenai -e "gpt-4.1" -m "gpt-4.1" -u "https://k8sai2.openai.azure.com/" -p "DHWrlTLkdMTqcF5f6SGjsMuV2BqqpKjAZZ5f4yRi7HVkry5N4GMsJQQJ99BEACYeBjFXJ3w3AAABACOGuKr7"
+   27  k8sgpt auth update -b azureopenai -e "gpt-4.1" -m "gpt-4.1" -u "https://k8sai2.openai.azure.com/" -p "DHWrlTLkdMTqcF5f6SGjsMuV2BqqpKjAZZ5f4yRi7HVkry5N4GMsJQQJ99BEACYeBjFXJ3w3AAABACOGuKr7"
+   28  k8sgpt analyze --explain
+   29  k8sgpt analyze --explain --Filetrs=Pod
+   30  k8sgpt analyze --explain --Filetr=Pod
+   31  k8sgpt analyze --explain --Filter=Pod
+   32  k8sgpt analyze --explain --filter=Pod
+   33  history
+
+
+k8sgpt auth list
+k8sgpt auth add -b azureopenai -e "gpt-4.1" -m "gpt-4.1" -u "https://k8sai2.openai.azure.com/" -p "DHWrlTLkdMTqcF5f6SGjsMuV2BqqpKjAZZ5f4yRi7HVkry5N4GMsJQQJ99BEACYeBjFXJ3w3AAABACOGuKr7"
+k8sgpt auth update -b azureopenai -e "gpt-4.1" -m "gpt-4.1" -u "https://k8sai2.openai.azure.com/" -p "DHWrlTLkdMTqcF5f6SGjsMuV2BqqpKjAZZ5f4yRi7HVkry5N4GMsJQQJ99BEACYeBjFXJ3w3AAABACOGuKr7"
+ k8sgpt auth default -p azureopenai
